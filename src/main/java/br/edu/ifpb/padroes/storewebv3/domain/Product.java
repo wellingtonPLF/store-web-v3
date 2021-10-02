@@ -1,5 +1,7 @@
 package br.edu.ifpb.padroes.storewebv3.domain;
 
+import br.edu.ifpb.padroes.storewebv3.visitor.Visitor;
+
 public class Product {
 
     private Long id;
@@ -46,5 +48,9 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    
+    public String call(Visitor visitor) {
+    	return "Meu Produto";
     }
 }

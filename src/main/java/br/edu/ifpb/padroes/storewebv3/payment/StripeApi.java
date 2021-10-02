@@ -3,6 +3,8 @@ package br.edu.ifpb.padroes.storewebv3.payment;
 import br.edu.ifpb.padroes.storewebv3.config.StoreConfigurationProperties;
 import br.edu.ifpb.padroes.storewebv3.domain.Order;
 import br.edu.ifpb.padroes.storewebv3.domain.Product;
+import br.edu.ifpb.padroes.storewebv3.mediator.Mediator;
+
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
@@ -12,7 +14,7 @@ import com.stripe.param.SkuCreateParams;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StripeApi {
+public class StripeApi implements Mediator{
 
     private final StoreConfigurationProperties storeConfigurationProperties;
 
